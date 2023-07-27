@@ -21,7 +21,8 @@
         extend: {
           colors: {
             bittersweet: '#F85559',
-            darkGray: '#121212'
+            darkGray: '#121212',
+            Grayed: '#121212AA'
           },
           backgroundImage: {
             'hero-background': "url('./images/banner1.png')"
@@ -53,12 +54,22 @@
           <a class="btn btn-ghost normal-case text-3xl"><img class="w-8" src="./images/logo.png" alt="">Fruit Burst</a>
         </div>
         <div class="flex-none">
-          <button class="btn btn-square btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              class="inline-block w-5 h-5 stroke-current">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm dropdown-content -ml-20 z-[1] p-4 bg-base-100 rounded-box items-end">
+              <!-- <li class="hover:bg-bittersweet rounded-lg"><a class="hover:text-white">Home</a></li> -->
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>About Us</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- large screen navbar -->
@@ -199,11 +210,11 @@
           </div>
           <div>
             <img width="60px" src="./images/fruit2.png" alt="">
-            <p>Strawberry</p>
+            <p>Orange</p>
           </div>
           <div>
             <img width="75px" src="./images/fruit3.png" alt="">
-            <p>Strawberry</p>
+            <p>Mango</p>
           </div>
           <div>
             <img width="75px" src="./images/fruit4.png" alt="">
@@ -211,7 +222,7 @@
           </div>
           <div>
             <img width="75px" src="./images/fruit5.png" alt="">
-            <p>Strawberry</p>
+            <p>Mango</p>
           </div>
         </div>
       </div>
@@ -236,27 +247,56 @@
         <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
           <div class="flex flex-col">
             <span class="countdown font-lato text-5xl">
-              <span class="font-black" style="--value:15;"></span>:
+              <span class="font-black px-4" style="--value:15;"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame">
+                  <path id="Vector"
+                    d="M12 6.75C11.8011 6.75 11.6103 6.67098 11.4697 6.53033C11.329 6.38968 11.25 6.19891 11.25 6C11.25 5.80109 11.329 5.61032 11.4697 5.46967C11.6103 5.32902 11.8011 5.25 12 5.25C12.1989 5.25 12.3897 5.32902 12.5303 5.46967C12.671 5.61032 12.75 5.80109 12.75 6C12.75 6.19891 12.671 6.38968 12.5303 6.53033C12.3897 6.67098 12.1989 6.75 12 6.75ZM12 12.75C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12C11.25 11.8011 11.329 11.6103 11.4697 11.4697C11.6103 11.329 11.8011 11.25 12 11.25C12.1989 11.25 12.3897 11.329 12.5303 11.4697C12.671 11.6103 12.75 11.8011 12.75 12C12.75 12.1989 12.671 12.3897 12.5303 12.5303C12.3897 12.671 12.1989 12.75 12 12.75ZM12 18.75C11.8011 18.75 11.6103 18.671 11.4697 18.5303C11.329 18.3897 11.25 18.1989 11.25 18C11.25 17.8011 11.329 17.6103 11.4697 17.4697C11.6103 17.329 11.8011 17.25 12 17.25C12.1989 17.25 12.3897 17.329 12.5303 17.4697C12.671 17.6103 12.75 17.8011 12.75 18C12.75 18.1989 12.671 18.3897 12.5303 18.5303C12.3897 18.671 12.1989 18.75 12 18.75Z"
+                    stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
             </span>
-            days
+            <div class="pr-4 text-Grayed">
+              days
+            </div>
           </div>
           <div class="flex flex-col">
             <span class="countdown font-lato text-5xl">
-              <span class="font-black" style="--value:10;"></span>:
+              <span class="font-black px-4" style="--value:10;"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame">
+                  <path id="Vector"
+                    d="M12 6.75C11.8011 6.75 11.6103 6.67098 11.4697 6.53033C11.329 6.38968 11.25 6.19891 11.25 6C11.25 5.80109 11.329 5.61032 11.4697 5.46967C11.6103 5.32902 11.8011 5.25 12 5.25C12.1989 5.25 12.3897 5.32902 12.5303 5.46967C12.671 5.61032 12.75 5.80109 12.75 6C12.75 6.19891 12.671 6.38968 12.5303 6.53033C12.3897 6.67098 12.1989 6.75 12 6.75ZM12 12.75C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12C11.25 11.8011 11.329 11.6103 11.4697 11.4697C11.6103 11.329 11.8011 11.25 12 11.25C12.1989 11.25 12.3897 11.329 12.5303 11.4697C12.671 11.6103 12.75 11.8011 12.75 12C12.75 12.1989 12.671 12.3897 12.5303 12.5303C12.3897 12.671 12.1989 12.75 12 12.75ZM12 18.75C11.8011 18.75 11.6103 18.671 11.4697 18.5303C11.329 18.3897 11.25 18.1989 11.25 18C11.25 17.8011 11.329 17.6103 11.4697 17.4697C11.6103 17.329 11.8011 17.25 12 17.25C12.1989 17.25 12.3897 17.329 12.5303 17.4697C12.671 17.6103 12.75 17.8011 12.75 18C12.75 18.1989 12.671 18.3897 12.5303 18.5303C12.3897 18.671 12.1989 18.75 12 18.75Z"
+                    stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
             </span>
-            hours
+            <div class="pr-4 text-Grayed">
+              hours
+            </div>
           </div>
           <div class="flex flex-col">
             <span class="countdown font-lato text-5xl">
-              <span class="font-black" style="--value:24;"></span>:
+              <span class="font-black px-4" style="--value:24;"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame">
+                  <path id="Vector"
+                    d="M12 6.75C11.8011 6.75 11.6103 6.67098 11.4697 6.53033C11.329 6.38968 11.25 6.19891 11.25 6C11.25 5.80109 11.329 5.61032 11.4697 5.46967C11.6103 5.32902 11.8011 5.25 12 5.25C12.1989 5.25 12.3897 5.32902 12.5303 5.46967C12.671 5.61032 12.75 5.80109 12.75 6C12.75 6.19891 12.671 6.38968 12.5303 6.53033C12.3897 6.67098 12.1989 6.75 12 6.75ZM12 12.75C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12C11.25 11.8011 11.329 11.6103 11.4697 11.4697C11.6103 11.329 11.8011 11.25 12 11.25C12.1989 11.25 12.3897 11.329 12.5303 11.4697C12.671 11.6103 12.75 11.8011 12.75 12C12.75 12.1989 12.671 12.3897 12.5303 12.5303C12.3897 12.671 12.1989 12.75 12 12.75ZM12 18.75C11.8011 18.75 11.6103 18.671 11.4697 18.5303C11.329 18.3897 11.25 18.1989 11.25 18C11.25 17.8011 11.329 17.6103 11.4697 17.4697C11.6103 17.329 11.8011 17.25 12 17.25C12.1989 17.25 12.3897 17.329 12.5303 17.4697C12.671 17.6103 12.75 17.8011 12.75 18C12.75 18.1989 12.671 18.3897 12.5303 18.5303C12.3897 18.671 12.1989 18.75 12 18.75Z"
+                    stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
             </span>
-            min
+            <div class="pr-4 text-Grayed">
+              min
+            </div>
           </div>
           <div class="flex flex-col">
             <span class="countdown font-lato text-5xl">
               <span class="font-black" style="--value:54;"></span>
             </span>
-            sec
+            <div class="pr-2 text-Grayed">
+              sec
+            </div>
           </div>
         </div>
       </div>
